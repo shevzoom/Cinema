@@ -58,4 +58,4 @@ override func prepareForReuse() {
 ![IMG_0209](https://user-images.githubusercontent.com/64494962/137786642-510603a9-833d-466b-8453-1e772b1d9d03.gif)
 
   
-![IMG_0205](https://user-images.githubusercontent.com/64494962/137786719-600161b0-2350-481e-97be-f9049708086f.PNG)
+![photo_2021-10-18 21 53 19](https://user-images.githubusercontent.com/64494962/137789964-1d7108f8-9aa9-4f8a-9eba-81c7dc6358ee.jpeg)
