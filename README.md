@@ -15,7 +15,7 @@
 
 • Для работы с сетью сделал class MovieService (singleton pattern)
 
-> в будущем будет инжект с 
+> сейчас Сервис закрыт протоколом, но в будущем будет инжект с 
 ```swift
 class MovieViewModel {
 
@@ -29,22 +29,19 @@ class MovieViewModel {
 
 }
 ```
+> чтобы можно в будущем было подменить этот объект и написать тесты на MovieViewModel
 
 • для создание нужного url использовал URLQueryItem + Endpoint
 
-• открыл URLSession, где данные приходят в background потоке
- 
-• инициализировал init в структурах (Codable) для того, чтобы избежать nil при декодировании 
+• открыл URLSession, где данные приходят в background потоке 
 
-• Для прокрутки ленты (infinite scroll/ pagination) использовал метод делегата willDisplay
+• В методе fetchAllMovies загрузку из 4-х источников с помощью [DispatchGroup](https://developer.apple.com/documentation/dispatch/dispatchgroup) 
+ 
+• Для перехода на новый экран использовал метод делегата didSelectItemAt
  
 • для переиспользования ячеек использовал метод dequeueReusableCell
-  
-• обновлял ячейки с помощью reloadData, потому что это наиболее простой способ
  
-• обработка касаний с помощью UITapGestureRecognizer и далее передавал событие ViewController
- 
-• все анимирование "распахивания" картинок вынес в отдельную функцию. Повторное касание уничтожает subView по очереди. Для blurEffect использовал autoresizingMask
+• кеширование и анимация изображений с помощью [Kingfisher](https://github.com/onevcat/Kingfisher) 
 
 ## Compositional Layout
   
