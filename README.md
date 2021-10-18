@@ -43,6 +43,16 @@ class MovieViewModel {
  
 • кеширование и анимация изображений с помощью [Kingfisher](https://github.com/onevcat/Kingfisher) 
 
+• в методе prepareForReuse у ячеек добавил отмену загрузки картинок, иначе если быстро скролить может большое кол-во тасок на загрузку картинок создаться, хотя мы уже проскролили далеко и они нам не нужны:
+
+```swift
+override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.kf.cancelDownloadTask()
+        imageView.image = nil
+    }
+```
+
 ## Compositional Layout
   
 ![IMG_0209](https://user-images.githubusercontent.com/64494962/137786642-510603a9-833d-466b-8453-1e772b1d9d03.gif)
