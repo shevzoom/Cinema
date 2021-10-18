@@ -15,9 +15,8 @@
 
 • Для работы с сетью сделал class MovieService (singleton pattern)
 
->> в будущем будет инжект с 
->> 
-```
+> в будущем будет инжект с 
+```swift
 class MovieViewModel {
 
     private let movieService: MovieServiceProtocol
