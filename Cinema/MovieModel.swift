@@ -18,7 +18,7 @@ class MovieViewModel {
     var isError: Bool = false {
         didSet {
             if isError {
-                self.onError?()
+                onError?()
             }
         }
     }
@@ -26,7 +26,7 @@ class MovieViewModel {
     var isLoading: Bool = false {
         didSet {
             if isLoading {
-                self.onLoading?()
+                onLoading?()
             }
         }
     }
@@ -34,7 +34,7 @@ class MovieViewModel {
     var isCompleteFetchMovies: Bool = false {
         didSet {
             if isCompleteFetchMovies {
-                self.onCompleteFetchMovies?()
+                onCompleteFetchMovies?()
             }
         }
     }

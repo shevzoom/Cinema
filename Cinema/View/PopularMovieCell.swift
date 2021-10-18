@@ -19,7 +19,7 @@ class PopularMovieCell: UICollectionViewCell {
 
     var movie: Movie? {
         didSet {
-            self.configureCell()
+            configureCell()
         }
     }
     
